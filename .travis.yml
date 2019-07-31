@@ -6,4 +6,4 @@ before_install:
   - docker build -t dockertravisreact -f Dockerfile.dev .
 
 script:
-  - docker run dockertravisreact npm run test -- --coverage #-e CI=true without -- --coverage
+  - docker run -e CI=true dockertravisreact npm run test #-e CI=true without -- --coverage
